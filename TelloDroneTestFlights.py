@@ -19,7 +19,7 @@ sock.bind(locaddr)
 
 #Square
 def square():
-    sendmsg("up 75")
+    sendmsg("up 50")
     for i in range(4):
         sendmsg("forward 100")
         sendmsg("ccw 90")

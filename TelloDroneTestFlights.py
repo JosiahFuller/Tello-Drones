@@ -20,6 +20,7 @@ sock.bind(locaddr)
 #Square
 def square():
     sendmsg("up 50")
+    sendmsg("up 75")
     for i in range(4):
         sendmsg("forward 100")
         sendmsg("ccw 90")
@@ -57,7 +58,18 @@ recvThread.start()
 
 # CREATE FUNCTIONS HERE....
 
-#Square
+#
+
+
+#Triangle Function
+def triangle():
+    for i in range(3):
+        sendmsg("forward 100", 3)
+        sendmsg("cw 120", 3)
+
+
+
+#Square Function
 def square():
     sendmsg("up 75")
     for i in range(4):
@@ -81,7 +93,7 @@ try:
         sendmsg('takeoff')
 
 
-        square()
+        triangle()
 
 
         sendmsg('land')

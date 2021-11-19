@@ -9,7 +9,7 @@ import threading, socket, sys, time, subprocess
 host = ''
 port = 9000
 locaddr = (host,port)
-tello_address = ('192.168.10.1', 8889) # Get the
+tello_address = ('192.168.10.1', 8891) # Get the
 # Creates a UDP socketd
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 

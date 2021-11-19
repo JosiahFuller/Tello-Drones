@@ -58,8 +58,13 @@ recvThread.start()
 
 # CREATE FUNCTIONS HERE....
 
-#
-
+#Descent Function
+def descent():
+    sendmsg("Battery?")
+    sendmsg("up 50")
+    for i in range(5):
+        sendmsg("forward 50")
+        sendmsg("down 25")
 
 #Triangle Function
 def triangle():
@@ -91,10 +96,9 @@ try:
 
         sendmsg('command', 0)
         sendmsg('takeoff')
+        sendmsg("speed 5", 0)
 
-
-        triangle()
-
+        descent()
 
         sendmsg('land')
 

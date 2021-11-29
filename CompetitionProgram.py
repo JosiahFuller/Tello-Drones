@@ -45,6 +45,8 @@ recvThread.start()
 
 
 def firstHoop():
+    sendmsg("up 1000", 0.5)
+    sendmsg("forward 1000", 0.5)
 
 """
 #def secondHop():

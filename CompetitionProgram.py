@@ -42,19 +42,21 @@ recvThread.start()
 
 
 # CREATE FUNCTIONS HERE....
+#drone wifi address D8DEC5
+
+#def firstHoop():
+    #sendmsg("forward 200")
 
 
-def firstHoop():
-    sendmsg("forward 200")
+#def secondHoop():
+    #sendmsg("go 250 0 50 75")
 
 
-def secondHoop():
-    sendmsg("go 250 0 50 75")
+def thirdHoop():
+    sendmsg("curve 0 0 0 -10 0 -350 75")
+
 
 """
-#def thirdHoop():
-
-
 #def fourthHoop():
 """
 
@@ -73,8 +75,9 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        firstHoop()
-        secondHoop()
+        #firstHoop()
+        #secondHoop()
+        thirdHoop()
         # Review the (SDK) Software Development Kit resource for Drone Commands
         # Delete these comments before writing your program
 

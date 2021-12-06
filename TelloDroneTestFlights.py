@@ -9,7 +9,7 @@ import threading, socket, sys, time, subprocess
 host = ''
 port = 9000
 locaddr = (host,port)
-tello_address = ('192.168.10.1', 8891) # Get the
+tello_address = ('192.168.10.1', 8889) # Get the
 # Creates a UDP socketd
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -41,8 +41,12 @@ def recv():
 
             print(data.decode(encoding="utf-8"))
         except Exception:
-            print ('\n****Keep Eye on Drone****\n')
-            break
+            def square():
+                sendmsg("up 75")
+            for i in range(4):
+                sendmsg("forward 100")
+                sendmsg("ccw 90") ('\n****Keep Eye on Drone****\n')
+        break
 
 
 def sendmsg(msg, sleep = 6):
@@ -59,12 +63,20 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 #Descent Function
-def descent():
-    sendmsg("Battery?")
-    sendmsg("up 50")
-    for i in range(5):
-        sendmsg("forward 50")
-        sendmsg("down 25")
+#def descent():
+    #sendmsg("Battery?")
+    #sendmsg("up def square():
+    #sendmsg("up 75")
+    #for i in range(4):
+        #sendmsg("forward 100")
+        #sendmsg("ccw 90")50")
+    #for i in range(5):
+        #sendmsg("forward 50")
+        #sendmsg(def square():
+    #sendmsg("up 75")
+    #for i in range(4):
+        #sendmsg("forward 100")
+        #sendmsg("ccw 90")"down 25")
 
 #Triangle Function
 def triangle():
@@ -75,11 +87,7 @@ def triangle():
 
 
 #Square Function
-def square():
-    sendmsg("up 75")
-    for i in range(4):
-        sendmsg("forward 100")
-        sendmsg("ccw 90")
+
 
 
 print("\nJosiah Fuller")
@@ -98,7 +106,7 @@ try:
         sendmsg('takeoff')
         sendmsg("speed 5", 0)
 
-        descent()
+        triangle()
 
         sendmsg('land')
 

@@ -17,15 +17,9 @@ sock.bind(locaddr)
 
 # CREATE FUNCTIONS HERE....
 
-#Square
-def square():
-    sendmsg("up 50")
-    sendmsg("up 75")
-    for i in range(4):
-        sendmsg("forward 100")
-        sendmsg("ccw 90")
-
-
+def ourFunction():
+    sendmsg("curve 100 100 20 125 125 0 25", 8)
+    sendmsg("curve 100 100 21 125 125 0 25", 8)
 print("\nJosiah Fuller")
 print("Tello Drones ")
 print("11.17.2021 ")
@@ -62,31 +56,7 @@ recvThread.start()
 
 # CREATE FUNCTIONS HERE....
 
-#Descent Function
-#def descent():
-    #sendmsg("Battery?")
-    #sendmsg("up def square():
-    #sendmsg("up 75")
-    #for i in range(4):
-        #sendmsg("forward 100")
-        #sendmsg("ccw 90")50")
-    #for i in range(5):
-        #sendmsg("forward 50")
-        #sendmsg(def square():
-    #sendmsg("up 75")
-    #for i in range(4):
-        #sendmsg("forward 100")
-        #sendmsg("ccw 90")"down 25")
 
-#Triangle Function
-def triangle():
-    for i in range(3):
-        sendmsg("forward 100", 3)
-        sendmsg("cw 120", 3)
-
-
-
-#Square Function
 
 
 
@@ -106,7 +76,7 @@ try:
         sendmsg('takeoff')
         sendmsg("speed 5", 0)
 
-        triangle()
+        ourFunction()
 
         sendmsg('land')
 

@@ -45,11 +45,11 @@ recvThread.start()
 #drone wifi address D8DEC5
 
 def firstHoop():
-    sendmsg("forward 225")
+    sendmsg("forward 255")
 
 
 def secondHoop():
-    sendmsg("go 200 0 50 75", 8)
+    sendmsg("go 250 0 50 75", 8)
 
 
 def thirdHoop():

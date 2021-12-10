@@ -16,10 +16,6 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind(locaddr)
 
 # CREATE FUNCTIONS HERE....
-
-def ourFunction():
-    sendmsg("curve 100 100 20 125 125 0 25", 8)
-    sendmsg("curve 100 100 21 125 125 0 25", 8)
 print("\nJosiah Fuller")
 print("Tello Drones ")
 print("11.17.2021 ")
@@ -56,6 +52,12 @@ recvThread.start()
 
 # CREATE FUNCTIONS HERE....
 
+def randomFunction():
+    sendmsg("up 30")
+    sendmsg("forward 50", 8)
+    sendmsg("flip f", 8)
+    sendmsg("forward 20")
+    sendmsg("flip f")
 
 
 
@@ -76,7 +78,7 @@ try:
         sendmsg('takeoff')
         sendmsg("speed 5", 0)
 
-        ourFunction()
+        randomFunction()
 
         sendmsg('land')
 
